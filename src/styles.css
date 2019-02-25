@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/vendor/semantic.min.css';
+
+body {
+    padding: 10px;
+}
+
+.submitbutton {
+    background-color: #D1E7FF;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.disabledbutton {
+  background-color: rgba(128, 128, 128, 0.685);
+  color: grey;
+}
+
+.errormessage {
+  margin: 2px;
+  color: grey;
+}
+
+.mainnav {
+  top:0;
+  width: 100%;
+  background-color: #F1F9FF;
+  list-style-type: none;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.navlist {
+  padding: 12px;
+  float: left;
+}
+
+.navlist:hover{
+  background-color: rgba(128, 128, 128, 0.685);
+}
+
+.ui.menu .item img.logo {
+    margin-right: 1.5em;
+}
+
+form.ui.segment.form {
+  background-color: #F1F9FF;
+  margin-top: 2em;
+  width: 40em;
+}
+
+form.form:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.votes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E6E6E6;
+  padding: 1em 0;
+  border-radius: 5px;
+}
+
+.ui.grid.posts {
+  margin-top: 2em;
+}
+
+.meta {
+  color: #9A9A9A
+}
+
+.ui.grid>.row>.column.votes {
+  display: flex;
+}
+
+ul.ui.list li:before {
+  content: '';
+}
+
+.voters {
+  clear: both;
+  width: 100%;
+}
+

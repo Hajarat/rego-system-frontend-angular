@@ -1,0 +1,32 @@
+<h2>Angular Registration System</h2>
+<form class="ui large form segment" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+  <h3 class="ui header">Register to our system here</h3>
+  <div class="field">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" formControlName="name">
+    <b class="errormessage" *ngIf="name.invalid && name.touched">Your name entry is invalid</b>
+  </div>
+  <!-- Input separator -->
+  <div class="field">
+    <label for="age">Age</label>
+    <input type="text" name="age" id="age" formControlName="age">
+    <b class="errormessage" *ngIf="age.errors?.pattern && age.touched">Your age entry is invalid</b>
+    <b class="errormessage" *ngIf="age.errors?.min && age.touched">Your age entry is too low!</b>
+    <b class="errormessage" *ngIf="age.errors?.max && age.touched">Your age entry is too high!</b>
+  </div>
+  <!-- Input separator -->
+  <div class="field">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" formControlName="email">
+    <b class="errormessage" *ngIf="(email.invalid && email.touched) || (email.errors?.email && email.touched)">Your email entry is invalid</b>
+  </div>
+  <!-- Input separator -->
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" formControlName="password">
+    <b class="errormessage" *ngIf="password.invalid && password.touched">Your password entry is invalid</b>
+  </div>
+   <!-- Input separator -->
+   <button [ngClass]="{'disabledbutton': regForm.invalid}" [disabled]="regForm.invalid" class="submitbutton">
+    Submit</button>
+</form>
