@@ -28,11 +28,7 @@ export class RegisterFormComponent implements OnInit {
 
   onSubmit() {
     this.http.post('http://localhost:8080/Registration/RegisterServlet', this.regForm.value).subscribe(res=>{
-      if(res == null) {
-        console.log('ok!')
-      } else {
-        console.log(res)
-      }
+      console.log(res)
     });
   }
 

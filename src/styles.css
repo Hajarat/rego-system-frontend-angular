@@ -1,6 +1,6 @@
 @import './app/vendor/semantic.min.css';
 
-body {
+.body {
     padding: 10px;
 }
 
@@ -89,3 +89,15 @@ ul.ui.list li:before {
   width: 100%;
 }
 
+table {
+  margin: 10px 0;
+}
+
+th, td {
+  border-right: 1px SOLID BLACK;
+  padding: 5px 25px;
+}
+
+th:last-child, td:last-child {
+  border-right: none;
+}
